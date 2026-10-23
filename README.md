@@ -1,2 +1,22 @@
 # pulse
-Daily telemetry for my GitHub profile — contribution streak, repos, stars, followers. One scheduled job, no dependencies.
+
+Daily telemetry for [@a-saeedia](https://github.com/a-saeedia) — contribution
+streak, repo count, stars, followers. Regenerated every day at 06:43 UTC by
+`.github/workflows/pulse.yml`; history accumulates in `data/history.csv`.
+
+<!-- PULSE:START -->
+_awaiting first run_
+<!-- PULSE:END -->
+
+## Why
+
+One scheduled job, zero dependencies, no third-party action pinned to a moving
+tag. It reads the GraphQL API with the repo's own token, rewrites the block
+above, appends a row, and commits. If the numbers did not move, the CSV row
+still proves the day ran.
+
+## Run it yourself
+
+```bash
+GITHUB_TOKEN=... node scripts/pulse.mjs
+```
